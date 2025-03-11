@@ -10,12 +10,6 @@ function FindProxyForURL(url, host) {
         return blackhole;
     }
 
-    // deny google for testing 
-    if (/^https:\/\/www\.google\.com\/.*\/i.test(url)) {
-        alert("url = " + url + " *** host = " + host + " *** Resolved IP = " + dnsResolve(host));
-        return blackhole;
-    }
-
     return normal;
 }
 
